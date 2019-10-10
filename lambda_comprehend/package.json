@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "socket.io-client": "^2.3.0"
+  }, "scripts": {
+    "deploy": "sls deploy -v",
+    "down": "sls remove"
+  }
+}

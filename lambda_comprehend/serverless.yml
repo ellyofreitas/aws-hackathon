@@ -1,0 +1,36 @@
+service: aws-comprehend
+
+provider:
+  name: aws
+  runtime: nodejs10.x
+  region: us-east-1
+  memorySize: 256
+  environment:
+    S3_TRANSCRIPTION_BUCKET: ellyofreitastranscriptionhacka
+    API_SOCKET: http://54.83.123.51:3000
+    REGION: us-east-1
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - s3:GetObject
+      Resource:
+        - 'arn:aws:s3:::${self:provider.environment.S3_TRANSCRIPTION_BUCKET}/*'
+    - Effect: Allow
+      Action:
+        - comprehend:DetectDominantLanguage
+        - comprehend:DetectSentiment
+        - comprehend:DetectEntities
+        - comprehend:DetectKeyPhrases
+      Resource: '*'
+
+functions:
+  comprehend:
+    handler: comprehend.handler
+    timeout: 72
+    events:
+      - s3:
+          bucket: ${self:provider.environment.S3_TRANSCRIPTION_BUCKET}
+          event: s3:ObjectCreated:*
+          rules:
+            - suffix: .json
+          existing: true
