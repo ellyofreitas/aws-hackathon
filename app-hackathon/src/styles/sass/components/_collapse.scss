@@ -1,0 +1,64 @@
+.audio-area__list {
+    padding: 2rem;
+    
+    
+    &--item {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        font-size: 1.2rem;
+        background-color: rgba(0,0,0,.03);
+        padding: 1rem 1.25rem;
+        border: 1px solid #00000020;
+        border-radius: .25rem .25rem 0 .25rem;
+        margin: .5rem .5rem 0 .5rem;
+        cursor: pointer;
+
+        p {
+            margin: 0;
+        }
+    }
+
+    .collapse {
+        display: none;
+        padding: .75rem 1.25rem;
+        border-right: 1px solid rgba(0,0,0,.125);
+        border-left: 1px solid rgba(0,0,0,.125);
+        border-bottom: 1px solid rgba(0,0,0,.125);
+        overflow: hidden;
+        background-color: lightgray;
+        margin: -.1rem .5rem;
+
+        .player {
+            margin-top: .7rem;
+            width: 100%;
+        }
+
+        &__transcription {
+            padding: .5rem;
+            font-size: 1.2rem;
+        }
+    }
+
+    .btn-upload-item {
+        display: flex;
+        justify-content: center;
+        
+        background-color: var(--color-primary-dark);
+        padding: 1rem 1.25rem;
+        border: 1px solid #00000020;
+        border-radius: .25rem .25rem 0 .25rem;
+        margin: 1rem .5rem 0 .5rem;
+        cursor: pointer;
+
+        &:active {
+            background-color: #006885;
+        }
+    }
+
+    .svg-icon-upload {
+        height: 3.6rem;
+        width: 3.6rem;
+        fill: #FFF;
+    }
+}

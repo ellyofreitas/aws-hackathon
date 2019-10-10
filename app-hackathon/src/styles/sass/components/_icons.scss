@@ -1,0 +1,24 @@
+.svg-icon--add {
+    margin-left: .8rem;
+    fill: #FFF;
+    height: 15px;
+    width: 15px;
+}
+
+.icon-container {
+    justify-self: flex-end;
+}
+
+.svg-icon-audio {
+    fill: #21212187;
+    height: 26px;
+    width: 26px;
+
+    &--warning {
+        fill: #9e8b01;
+    }
+
+    &--success {
+        fill: var(--color-secondary-dark);
+    }
+}

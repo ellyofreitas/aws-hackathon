@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Node de Cajú</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <svg class="svg-logo">
+                <use xlink:href="icons/icons.svg#cashew"></use>
+            </svg> 
+
+            <form action="#" class="search">
+                <input type="text" class="search__input" placeholder="Pesquisar áudio">
+                <button class="search__button">
+                    <svg class="search__icon">
+                        <use xlink:href="icons/icons.svg#search"></use>
+                    </svg>
+                </button>
+            </form>
+
+            <nav class="user-nav">
+                <div class="user-nav__user">
+                    <img class="user-nav__user--photo" src="img/persona-1.jpg" alt="user-photo">
+                    <span class="user-nav__user--name">Olá, Diana</span>
+                    <svg class="user-nav__user--expand-icon"><use xlink:href="icons/icons.svg#sort-down"></use></svg>
+                </div>
+            </nav>
+        </header>
+        <div class="content">
+            <nav class="sidebar">
+                <ul class="side-nav">
+                    <li class="side-nav__item-active">
+                        <a href="#" class="side-nav--link">Sala 01</a>
+                    </li>
+                    
+                    <li class="side-nav__item">
+                        <a href="#" class="side-nav--link">Sala 02</a>
+                    </li>
+
+                    <li class="side-nav__item">
+                        <a href="#" class="side-nav--link">Sala 03</a>
+                    </li>
+                </ul>
+                <div class="bottom-options">
+                    <button class="btn"> Criar sala
+                        <svg class="svg-icon--add">
+                            <use xlink:href="icons/icons.svg#add"></use>
+                        </svg> 
+                    </button>
+                </div>
+            </nav><!--Navbar End-->
+            <main class="audio-area">
+                <div class="audio-area__list">
+
+                    <div class="audio-area__list--item">
+                        <span>Audio da aula de biologia</span>
+                        <span>09/10/2019</span>
+                        <span class="icon-container"><svg class="svg-icon-audio"><use xlink:href="icons/icons.svg#clock-circular-outline"></use></svg></span>
+                    </div><!--Audio Title-->
+                    <div class="collapse">
+                        <div class="audio">
+                            <audio class="player" src="#" controls></audio>
+                        </div>
+                        <div class="collapse__transcription">
+                            <h3>TRANSCRIPTION</h3>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, vitae consectetur culpa cum recusandae necessitatibus fugiat fugit id, cupiditate laborum ullam placeat doloribus sunt iure sit repellat ab quis ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit necessitatibus aperiam, magni, eligendi omnis dignissimos eos rerum obcaecati voluptates eum eius vitae. Ex praesentium quo nihil ipsam delectus adipisci quos! Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum quae a dicta minima quidem vero nulla reiciendis veritatis quasi voluptatibus soluta earum ipsum rerum, accusantium pariatur similique natus accusamus fugit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus adipisci dicta optio nulla animi libero, placeat numquam quia esse, magnam ab. Ex ipsum a fugiat nulla ab, voluptatem possimus dolorum. </div>
+                    </div><!--Audio Item Collapsed-->
+
+                    <div class="audio-area__list--item">
+                        <span>Audio da reunião de pais e mestres</span>
+                        <span>10/10/2019</span>
+                        <span class="icon-container"><svg class="svg-icon-audio svg-icon-audio--success"><use xlink:href="icons/icons.svg#check-mark"></use></svg></span>
+                    </div><!--Audio Item-->
+                    <div class="collapse">
+                            <div class="audio">
+                                <audio class="player" src="#" controls></audio>
+                            </div>
+                            <div class="collapse__transcription">
+                                <h3>TRANSCRIPTION</h3>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, vitae consectetur culpa cum recusandae necessitatibus fugiat fugit id, cupiditate laborum ullam placeat doloribus sunt iure sit repellat ab quis ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit necessitatibus aperiam, magni, eligendi omnis dignissimos eos rerum obcaecati voluptates eum eius vitae. Ex praesentium quo nihil ipsam delectus adipisci quos! Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum quae a dicta minima quidem vero nulla reiciendis veritatis quasi voluptatibus soluta earum ipsum rerum, accusantium pariatur similique natus accusamus fugit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus adipisci dicta optio nulla animi libero, placeat numquam quia esse, magnam ab. Ex ipsum a fugiat nulla ab, voluptatem possimus dolorum. </div>
+                        </div><!--Audio Item Collapsed-->
+
+                    <div class="audio-area__list--item">
+                        <span>Audio</span>
+                        <span>09/10/2019</span>
+                        <span class="icon-container"><svg class="svg-icon-audio svg-icon-audio--warning"><use xlink:href="icons/icons.svg#exclamation-mark"></use></svg></span>
+                    </div><!--Audio Item-->
+                    <div class="collapse">
+                            <div class="audio">
+                                <audio class="player" src="#" controls></audio>
+                            </div>
+                            <div class="collapse__transcription">
+                                <h3>TRANSCRIPTION</h3>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, vitae consectetur culpa cum recusandae necessitatibus fugiat fugit id, cupiditate laborum ullam placeat doloribus sunt iure sit repellat ab quis ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit necessitatibus aperiam, magni, eligendi omnis dignissimos eos rerum obcaecati voluptates eum eius vitae. Ex praesentium quo nihil ipsam delectus adipisci quos! Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum quae a dicta minima quidem vero nulla reiciendis veritatis quasi voluptatibus soluta earum ipsum rerum, accusantium pariatur similique natus accusamus fugit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus adipisci dicta optio nulla animi libero, placeat numquam quia esse, magnam ab. Ex ipsum a fugiat nulla ab, voluptatem possimus dolorum. </div>
+                        </div><!--Audio Item Collapsed-->
+                    
+                    <div class="audio-area__list--item">
+                        <span>Audio</span>
+                        <span>09/10/2019</span>
+                        <span class="icon-container"><svg class="svg-icon-audio"><use xlink:href="icons/icons.svg#clock-circular-outline"></use></svg></span>
+                    </div><!--Audio Item-->
+                    <div class="collapse">
+                            <div class="audio">
+                                <audio class="player" src="#" controls></audio>
+                            </div>
+                            <div class="collapse__transcription">
+                                <h3>TRANSCRIPTION</h3>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, vitae consectetur culpa cum recusandae necessitatibus fugiat fugit id, cupiditate laborum ullam placeat doloribus sunt iure sit repellat ab quis ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit necessitatibus aperiam, magni, eligendi omnis dignissimos eos rerum obcaecati voluptates eum eius vitae. Ex praesentium quo nihil ipsam delectus adipisci quos! Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum quae a dicta minima quidem vero nulla reiciendis veritatis quasi voluptatibus soluta earum ipsum rerum, accusantium pariatur similique natus accusamus fugit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus adipisci dicta optio nulla animi libero, placeat numquam quia esse, magnam ab. Ex ipsum a fugiat nulla ab, voluptatem possimus dolorum. </div>
+                    </div><!--Audio Item Collapsed-->
+                    
+                    <a href="#popup">
+                        <div class="btn-upload-item">
+                            <span class="icon-container"><svg class="svg-icon-upload"><use xlink:href="icons/icons.svg#upload"></use></svg></span>
+                        </div>
+                    </a>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <div class="popup" id="popup"><!--Popup-->
+        <div class="popup__content">
+            <div class="popup__content--upload">
+                <svg class="popup__content--upload--icon"><use xlink:href="icons/icons.svg#folder"></use></svg>
+                <span class="popup__content--upload--text">Arraste aqui</span>
+            </div>
+            <div class="popup__content--select">
+                <div class="popup__content--select-combo">
+                    <div class="select-box">
+                        <div class="select-box__current" tabindex="1">
+                            <div class="select-box__value"><!--Item possível na atual-->
+                                <input class="select-box__input" type="radio" id="0" value="1" name="Ben" checked="checked"/>
+                                <p class="select-box__input-text">Opção 1</p>
+                            </div>
+
+                            <div class="select-box__value"><!--Item possível na atual-->
+                                <input class="select-box__input" type="radio" id="1" value="2" name="Ben" checked="checked"/>
+                                <p class="select-box__input-text">Opção 2</p>
+                            </div>
+
+                            <div class="select-box__value"><!--Item possível na atual-->
+                                <input class="select-box__input" type="radio" id="1" value="2" name="Ben" checked="checked"/>
+                                <p class="select-box__input-text">Seleciona o vocabulário</p>
+                            </div>
+
+                            <svg class="select-box__icon"><use xlink:href="icons/icons.svg#angle-arrow-down" aria-hidden="true"></use></svg>
+                        </div>
+
+                        <!--Lista de opções-->
+                        <ul class="select-box__list">
+                            <li>
+                                <label class="select-box__option" for="0" aria-hidden="aria-hidden">Opção 1</label>
+                            </li>
+                                
+                            <li>
+                                <label class="select-box__option" for="1" aria-hidden="aria-hidden">Opção 2</label>
+                            </li> 
+                        </ul>
+                    </div><!--Fim da Select box-->
+                </div>
+                <div class="popup__content--select-details">
+                    File name: ...
+                </div>
+                <div class="popup__content--select-confirm">
+                    <button class="btn">
+                        <svg class="popup__content--select-confirm-icon-upload">
+                            <use xlink:href="icons/icons.svg#upload"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div><!--Popup ends-->
+
+    <svg style="width:0;height:0;position:absolute;" aria-hidden="true" focusable="false">
+            <linearGradient id="main-gradient" x2="1" y2="1">
+              <stop offset="0%" stop-color="var(--color-primary)" />
+              <!--<stop offset="50%" stop-color="#224488" />-->
+              <stop offset="100%" stop-color="var(--color-primary-dark)" />
+            </linearGradient>
+          </svg>
+    <script src="js/script.js"></script>
+</body>
+</html>

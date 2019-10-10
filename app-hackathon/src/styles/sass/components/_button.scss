@@ -1,0 +1,16 @@
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: none;
+    border-radius: .4rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    background-color: var(--color-secondary-dark);
+    color: #FFF;
+    padding: 1.3rem;
+}

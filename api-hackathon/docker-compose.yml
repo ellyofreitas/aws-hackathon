@@ -1,0 +1,46 @@
+version: '3'
+
+services:
+  app:
+    container_name: api-hackathon
+    build: '.'
+    environment:
+      PORT: 3000
+    volumes:
+      - ./:/node-app
+      - ./.env:/node-app/.env
+    environment:
+      NODE_ENV: production
+    ports:
+      - '3000:3000'
+    command: yarn start
+    depends_on:
+      - mongo
+      - redis
+    links:
+      - mongo
+      - redis
+    networks:
+      - my_net
+  
+  mongo:
+    container_name: mongodb
+    image: mongo
+    volumes:
+      - ./data:/data/db
+    ports:
+      - '27017:27017'
+    networks:
+      - my_net
+  
+  redis:
+    container_name: cache
+    image: redis
+    ports:
+      - '6379:6379'
+    networks:
+      - my_net
+
+networks:
+  my_net:
+    driver: bridge

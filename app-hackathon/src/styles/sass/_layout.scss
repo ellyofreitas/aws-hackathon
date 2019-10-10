@@ -1,0 +1,31 @@
+.container {
+    max-width: 120rem;
+    margin: 8rem 4rem;
+    background-color: var(--color-grey-light-1);
+    box-shadow: var(--shadow-dark);
+
+    min-height: 50rem;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 20% 1fr 15%;
+
+    height: 7rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 20% 1fr;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--color-grey-dark-1);
+
+    min-height: 100vh;
+}
+

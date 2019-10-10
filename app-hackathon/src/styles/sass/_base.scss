@@ -1,0 +1,65 @@
+/* by VITO
+
+Cores 
+
+Primary: #00C9FF
+Primary light: #89E9FF
+Primary dark: #0086AB
+
+Secondary: #92FE9D
+Secondary dark: #54B35A
+
+Grey light 1: #faf9f9
+Grey light 2: #f4f2f2
+Grey light 3: #f0eeee
+Grey light 4: #ccc
+
+Grey dark 1: #333
+Grey dark 2: #777
+Grey dark 3: #999
+
+*/
+
+:root {
+    --color-primary: #00C9FF;
+    --color-primary-light: #89E9FF;
+    --color-primary-dark: #0086AB;
+    --color-primary-dark-2: #006885;
+
+    --color-secondary: #92FE9D; 
+    --color-secondary-dark: #54B35A;
+
+    --color-grey-light-1: #faf9f9;
+    --color-grey-light-2: #f4f2f2;
+    --color-grey-light-3: #f0eeee;
+    --color-grey-light-4: #ccc;
+
+    --color-grey-dark-1: #333;
+    --color-grey-dark-2: #777;
+    --color-grey-dark-3: #999;
+
+    --shadow-dark: 0 2rem 6rem rgba(0, 0, 0,.3);
+    --shadow-light: 0 2rem 5rem rgba(0,0,0,.06);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--color-grey-dark-2);
+    background-image: linear-gradient(to right bottom, var(--color-primary), var(--color-secondary));
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}

@@ -1,0 +1,194 @@
+import styled from 'styled-components';
+
+export const Container = styled.div`
+  .popup {
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: all 0.3s;
+
+    &__content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      height: 60%;
+      width: 75%;
+      background-color: white;
+      box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+      border-radius: 3px;
+      overflow: hidden;
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.5);
+      transition: all 0.4s 0.2s;
+
+      &--upload {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        align-items: center;
+        margin: 3rem;
+        border: 0.4rem dotted var(--color-primary-dark-2);
+        cursor: pointer;
+
+        &:active {
+          background-color: var(--color-primary-dark-2);
+        }
+
+        &--icon {
+          grid-column: 2 / 3;
+          height: 12rem;
+          width: 12rem;
+          fill: var(--color-primary-dark-2);
+
+          align-self: center;
+          justify-self: center;
+        }
+
+        &--text {
+          grid-column: 2 / 3;
+
+          font-size: 2rem;
+          font-weight: bold;
+
+          align-self: center;
+          justify-self: center;
+
+          margin-top: -5rem;
+        }
+      }
+
+      &--select {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+
+        margin: 3rem;
+
+        &-confirm-icon-upload {
+          fill: #fff;
+          height: 5rem;
+        }
+      }
+    }
+
+    &:target {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &:target &__content {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+
+  // Código do combo box
+
+  .select-box {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 18px;
+    color: #60666d;
+
+    &__current {
+      position: relative;
+      box-shadow: 0 15px 30px -10px transparentize(#000, 0.9);
+      cursor: pointer;
+      outline: none;
+
+      &:focus {
+        & + .select-box__list {
+          opacity: 1;
+          animation-name: none;
+
+          .select-box__option {
+            cursor: pointer;
+          }
+        }
+
+        .select-box__icon {
+          transform: translateY(-50%) rotate(180deg);
+        }
+      }
+    }
+
+    &__icon {
+      position: absolute;
+      top: 50%;
+      right: 15px;
+      transform: translateY(-50%);
+      width: 20px;
+      opacity: 0.3;
+      transition: 0.2s ease;
+    }
+
+    &__value {
+      display: flex;
+    }
+
+    &__input {
+      display: none;
+
+      &:checked + .select-box__input-text {
+        display: block;
+      }
+    }
+
+    &__input-text {
+      display: none;
+      width: 100%;
+      margin: 0;
+      padding: 15px;
+      background-color: #fff;
+    }
+
+    &__list {
+      position: absolute;
+      width: 100%;
+      padding: 0;
+      list-style: none;
+      opacity: 0;
+
+      animation-name: HideList;
+      animation-duration: 0.5s;
+      animation-delay: 0.5s;
+      animation-fill-mode: forwards;
+      animation-timing-function: step-start;
+      box-shadow: 0 15px 30px -10px transparentize(#000, 0.9);
+    }
+
+    &__option {
+      display: block;
+      padding: 15px;
+      background-color: #fff;
+
+      &:hover,
+      &:focus {
+        color: #546c84;
+        background-color: #fbfbfb;
+      }
+    }
+  }
+
+  @keyframes HideList {
+    from {
+      transform: scaleY(1);
+    }
+    to {
+      transform: scaleY(0);
+    }
+  }
+`;
